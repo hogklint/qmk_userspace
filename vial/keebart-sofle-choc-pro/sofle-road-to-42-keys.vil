@@ -579,11 +579,35 @@
     [
       [
         "KC_TRNS",
+        "KC_GRAVE",
+        "KC_RBRACKET",
+        "RALT(KC_3)",
+        "RALT(KC_5)",
+        "LSFT(KC_4)"
+      ],
+      [
         "KC_TRNS",
+        "LSFT(KC_1)",
+        "RALT(KC_2)",
+        "RALT(KC_7)",
+        "RALT(KC_0)",
+        "LSFT(KC_7)"
+      ],
+      [
         "KC_TRNS",
+        "LSFT(KC_3)",
+        "LSFT(KC_6)",
+        "LSFT(KC_8)",
+        "LSFT(KC_9)",
+        "RALT(KC_4)"
+      ],
+      [
         "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
+        "RALT(KC_MINUS)",
+        "LSFT(KC_2)",
+        "RALT(KC_8)",
+        "RALT(KC_9)",
+        "KC_NONUS_HASH"
       ],
       [
         "KC_TRNS",
@@ -597,57 +621,33 @@
         "KC_TRNS",
         "KC_TRNS",
         "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
-      ],
-      [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
+        "KC_EQUAL",
         "KC_TRNS",
         "KC_TRNS"
       ],
       [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
+        "KC_KP_PLUS",
+        "KC_KP_MINUS",
+        "LSFT(KC_NONUS_HASH)",
+        "LSFT(KC_EQUAL)",
+        "RALT(KC_NONUS_BSLASH)",
+        "LSFT(KC_5)"
+      ],
+      [
+        "LSFT(KC_MINUS)",
+        "LSFT(KC_0)",
+        "KC_RIGHT",
+        "KC_UP",
+        "KC_DOWN",
+        "KC_LEFT"
       ],
       [
         "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
-      ],
-      [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
-      ],
-      [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
-      ],
-      [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
+        "LSFT(KC_SLASH)",
+        "LSFT(KC_DOT)",
+        "LSFT(KC_COMMA)",
+        "LSFT(KC_NONUS_BSLASH)",
+        "KC_NONUS_BSLASH"
       ],
       [
         "KC_TRNS",
@@ -1508,7 +1508,7 @@
     ],
     [
       "KC_ESCAPE",
-      "MO(4)",
+      "MO(7)",
       "KC_NO",
       "KC_NO",
       145
