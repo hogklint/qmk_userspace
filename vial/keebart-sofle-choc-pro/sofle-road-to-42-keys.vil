@@ -168,12 +168,12 @@
     ],
     [
       [
-        "KC_ESCAPE",
-        "KC_1",
-        "KC_2",
-        "KC_3",
-        "KC_4",
-        "KC_5"
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO"
       ],
       [
         "KC_NO",
@@ -208,12 +208,12 @@
         "KC_MUTE"
       ],
       [
-        "KC_MINUS",
-        "KC_0",
-        "KC_9",
-        "KC_8",
-        "KC_7",
-        "KC_6"
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO"
       ],
       [
         "KC_LBRACKET",
