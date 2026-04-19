@@ -1733,8 +1733,8 @@
       "MO(5)"
     ],
     [
-      "MO(6)",
-      "MO(4)",
+      "LT6(KC_TAB)",
+      "LT7(KC_ESCAPE)",
       "KC_NO",
       "KC_NO",
       "MO(5)"
