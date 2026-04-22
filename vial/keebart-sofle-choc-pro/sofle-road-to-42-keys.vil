@@ -464,10 +464,18 @@
       [
         "KC_TRNS",
         "KC_TRNS",
+        "KC_BTN2",
+        "KC_MS_U",
+        "KC_BTN1",
+        "KC_WH_U"
+      ],
+      [
         "KC_TRNS",
         "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
+        "KC_MS_R",
+        "KC_MS_D",
+        "KC_MS_L",
+        "KC_WH_D"
       ],
       [
         "KC_TRNS",
@@ -475,15 +483,7 @@
         "KC_TRNS",
         "KC_TRNS",
         "KC_TRNS",
-        "KC_TRNS"
-      ],
-      [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
+        "KC_NO"
       ],
       [
         "KC_TRNS",
@@ -2445,8 +2445,8 @@
     "9": 10,
     "10": 20,
     "11": 8,
-    "12": 10,
-    "13": 30,
+    "12": 3,
+    "13": 40,
     "14": 10,
     "15": 80,
     "16": 8,
