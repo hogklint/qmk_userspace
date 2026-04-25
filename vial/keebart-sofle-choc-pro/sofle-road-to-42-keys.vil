@@ -496,35 +496,35 @@
     ],
     [
       [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO"
       ],
       [
         "KC_TRNS",
-        "KC_MUTE",
         "KC_NO",
-        "KC_VOLU",
+        "KC_MSTP",
+        "KC_MPLY",
         "KC_HOME",
         "KC_PGUP"
       ],
       [
         "KC_TRNS",
         "KC_NO",
-        "KC_NO",
-        "KC_VOLD",
+        "KC_MPRV",
+        "KC_MNXT",
         "KC_END",
         "KC_PGDOWN"
       ],
       [
         "KC_TRNS",
-        "KC_MPRV",
-        "KC_MSTP",
-        "KC_MPLY",
-        "KC_MNXT",
+        "KC_MUTE",
+        "KC_VOLD",
+        "KC_VOLU",
+        "KC_NO",
         "LSFT(KC_RBRACKET)"
       ],
       [
@@ -536,12 +536,12 @@
         "KC_TRNS"
       ],
       [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO"
       ],
       [
         "KC_INSERT",
@@ -578,12 +578,12 @@
     ],
     [
       [
-        "KC_TRNS",
-        "KC_GRAVE",
-        "KC_RBRACKET",
-        "RALT(KC_3)",
-        "RALT(KC_5)",
-        "LSFT(KC_4)"
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO"
       ],
       [
         "KC_TRNS",
@@ -618,12 +618,12 @@
         "KC_TRNS"
       ],
       [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_EQUAL",
-        "KC_TRNS",
-        "KC_TRNS"
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO",
+        "KC_NO"
       ],
       [
         "KC_KP_PLUS",
@@ -872,12 +872,12 @@
         "KC_TRNS"
       ],
       [
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS",
-        "KC_TRNS"
+        "KC_EQUAL",
+        "LSFT(KC_4)",
+        "RALT(KC_5)",
+        "RALT(KC_3)",
+        "KC_RBRACKET",
+        "KC_GRAVE"
       ],
       [
         "KC_TRNS",
