@@ -681,7 +681,7 @@
         "LGUI(KC_4)",
         "LGUI(KC_5)",
         "LGUI(KC_6)",
-        "KC_NO"
+        "LALT(KC_M)"
       ],
       [
         "KC_TRNS",
@@ -710,26 +710,26 @@
       [
         "KC_NO",
         "KC_NO",
-        "KC_NO",
-        "KC_NO",
-        "KC_NO",
-        "KC_NO"
+        "KC_9",
+        "KC_8",
+        "KC_7",
+        "LALT(KC_UP)"
       ],
       [
         "KC_NO",
-        "KC_NO",
-        "KC_NO",
-        "KC_NO",
-        "KC_NO",
-        "KC_NO"
+        "LALT(KC_RIGHT)",
+        "KC_6",
+        "KC_5",
+        "KC_4",
+        "LALT(KC_LEFT)"
       ],
       [
         "KC_TRNS",
         "KC_NO",
-        "KC_NO",
-        "KC_NO",
-        "KC_NO",
-        "KC_NO"
+        "KC_3",
+        "KC_2",
+        "KC_1",
+        "LALT(KC_DOWN)"
       ],
       [
         "KC_TRNS",
