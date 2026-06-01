@@ -26,4 +26,5 @@ all:
 	@qmk userspace-compile
 
 kyria:
+	# Yes, rev4 is the correct revision
 	@qmk compile -kb splitkb/halcyon/kyria/rev4 -km default_hlc -e HLC_TFT_DISPLAY=1
