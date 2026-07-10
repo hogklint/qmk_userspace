@@ -28,3 +28,6 @@ all:
 kyria:
 	# Yes, rev4 is the correct revision
 	@qmk compile -kb splitkb/halcyon/kyria/rev4 -km default_hlc -e HLC_TFT_DISPLAY=1
+	# Flash it by pressing the reset button on the _connected_ half, the copy the
+	# splitkb_halcyon_kyria_rev4_default_hlc.uf2 file into the mounted directory.
+	# Connect the other half and repeat the process.
