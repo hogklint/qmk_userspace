@@ -365,6 +365,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
+void keyboard_post_init_user(void) {
+    default_layer_set(1UL << _QWERTY_HRM);
+}
+
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     // From Sofle encoder_layout layer 0: left=Vol, right=Prev/Next
