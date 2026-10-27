@@ -47,29 +47,29 @@ enum tap_dance_codes {
 
 // Tap dance state
 typedef struct {
-    uint8_t count;
+    bool held;
 } td_state_t;
 
 static td_state_t td_state;
 
 void td_osl9_mo8_finished(tap_dance_state_t *state, void *user_data) {
-    td_state.count = state->count;
-    if (state->count == 1) {
-        // Single tap: one-shot layer EMPTY
-        set_oneshot_layer(_EMPTY, ONESHOT_START);
-    } else if (state->count >= 2) {
-        // Double tap: momentary DESKTOP
+    td_state.held = state->pressed;
+    if (td_state.held) {
+        // Hold: momentary DESKTOP
         layer_on(_DESKTOP);
+    } else {
+        // Tap: one-shot layer EMPTY
+        set_oneshot_layer(_EMPTY, ONESHOT_START);
     }
 }
 
 void td_osl9_mo8_reset(tap_dance_state_t *state, void *user_data) {
-    if (td_state.count == 1) {
-        clear_oneshot_layer_state(ONESHOT_PRESSED);
-    } else if (td_state.count >= 2) {
+    if (td_state.held) {
         layer_off(_DESKTOP);
+    } else {
+        clear_oneshot_layer_state(ONESHOT_PRESSED);
     }
-    td_state.count = 0;
+    td_state.held = false;
 }
 
 tap_dance_action_t tap_dance_actions[] = {
@@ -192,7 +192,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Note: Sofle row 0 (top number row) is dropped due to Kyria having 3 rows only
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |  !   |  @   |  {   |  }   |  /   |                              |  %   |  |   |  `   |  ´   |  +   |KP +    |
+ * |        |  !   |  @   |  {   |  }   |  /   |                              |  %   |  |   |  `   |  *   |   -  |   +    |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |        |  #   |  &   |  (   |  )   |  $   |                              | Left | Down |  Up  | Right|  =   |  ?     |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
@@ -206,7 +206,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_SYM] = LAYOUT_split_3x6_5_hlc(
-     _______, SE_EXLM, SE_AT,   SE_LCBR, SE_RCBR, SE_SLSH,                                      SE_PERC, SE_PIPE, SE_GRV,  SE_ACUT, SE_PLUS, KC_PPLS,
+     _______, SE_EXLM, SE_AT,   SE_LCBR, SE_RCBR, SE_SLSH,                                      SE_PERC, SE_PIPE, SE_GRV,  SE_ASTR, SE_MINS, SE_PLUS,
      _______, SE_HASH, SE_AMPR, SE_LPRN, SE_RPRN, SE_DLR,                                       KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, SE_EQL,  SE_QUES,
      _______, SE_BSLS, SE_DQUO, SE_LBRC, SE_RBRC, SE_QUOT, _______, _______,  _______, _______, SE_LABK, SE_RABK, SE_SCLN, SE_COLN, SE_UNDS, _______,
                                 _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,
@@ -306,7 +306,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_DESKTOP] = LAYOUT_split_3x6_5_hlc(
-     _______, KC_NO,   LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LALT(KC_TAB),                        LALT(KC_UP), KC_7, KC_8,   KC_9,    LALT(KC_RGHT), KC_NO,
+     _______, KC_NO,   LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LALT(KC_TAB),                        LALT(KC_UP), KC_7, KC_8,   KC_9,    KC_NO,          KC_NO,
      _______, KC_NO,   LGUI(KC_4), LGUI(KC_5), LGUI(KC_6), LALT(KC_M),                          LALT(KC_LEFT), KC_4, KC_5, KC_6,    LALT(KC_RGHT), KC_NO,
      _______, KC_NO,   LGUI(KC_7), LGUI(KC_8), LGUI(KC_9), KC_NO, _______, _______, _______, _______, LALT(KC_DOWN), KC_1, KC_2, KC_3, KC_NO, _______,
                                 _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,
@@ -342,7 +342,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * F-keys Layer: Function keys (from Sofle layer 10, rows 1-3)
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |  F1  |  F2  |  F3  |  F4  |      |                              |  ´   |  ¤   |  €   |  £   |  ¨   |   §    |
+ * |        |  F1  |  F2  |  F3  |  F4  |      |                              |  §   |  ¨   |  £   |  €   |  ¤   |   ´    |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |        |  F5  |  F6  |  F7  |  F8  |      |                              |      |      |      |      |      |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
@@ -356,7 +356,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_FKEYS] = LAYOUT_split_3x6_5_hlc(
-     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______,                                      SE_ACUT, SE_CURR, SE_EURO, SE_PND,  SE_DIAE, SE_SECT,
+     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______,                                      SE_SECT, SE_DIAE, SE_PND,  SE_EURO, SE_CURR, SE_ACUT,
      _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______,                                      _______, _______, _______, _______, _______, _______,
      _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, _______,  _______, _______, _______, _______, _______, _______, _______, _______,
                                 _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,
