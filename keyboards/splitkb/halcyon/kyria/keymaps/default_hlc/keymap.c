@@ -306,8 +306,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------'                                              `-----------------------------------'
  */
     [_DESKTOP] = LAYOUT_split_3x6_5_hlc(
-     _______, KC_NO,   LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LALT(KC_TAB),                        LALT(KC_UP), KC_7, KC_8,   KC_9,    KC_NO,          KC_NO,
-     _______, KC_F5,   LGUI(KC_4), LGUI(KC_5), LGUI(KC_6), LALT(KC_M),                          LALT(KC_LEFT), KC_4, KC_5, KC_6,    LALT(KC_RGHT), KC_NO,
+     _______, KC_NO,   LGUI(KC_1), LGUI(KC_2), LGUI(KC_3),      KC_F5,                               LALT(KC_UP), KC_7, KC_8,   KC_9,    KC_NO,         KC_NO,
+     _______, LALT(KC_TAB), LGUI(KC_4), LGUI(KC_5), LGUI(KC_6), LALT(KC_M),                          LALT(KC_LEFT), KC_4, KC_5, KC_6,    LALT(KC_RGHT), KC_NO,
      _______, KC_NO,   LGUI(KC_7), LGUI(KC_8), LGUI(KC_9), KC_NO, _______, _______, _______, _______, LALT(KC_DOWN), KC_1, KC_2, KC_3, KC_NO, _______,
                                 _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,
               _______, _______, _______, _______, _______,                                      _______, _______, _______, _______, _______
